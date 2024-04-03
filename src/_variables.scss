@@ -1,0 +1,102 @@
+/* font families */
+$font-family-roboto: "Roboto Slab", serif;
+$font-family-lato: "Lato", sans-serif;
+$font-family-red-hat: "Red Hat Display", sans-serif;
+$primary-font-family: Roboto;
+
+/* basic colors */
+$primary-color-purple: #633ea5;
+$primary-color-purple-light: #f9edfd;
+$light-primary-color: #8160b3;
+$primary-color-yellow: #ffce5e;
+$primary-color-grey: #e7e7eb;
+$primary-color-background-yelow: #fdf7e9;
+$secondary-color-grey: #f2f2f2;
+$tertiary-color-grey: #828282;
+$radio-button-background: #f7cf71;
+$white-color: #ffffff;
+$red-color: #fe1919;
+$primary-black-color: #333;
+$secondary-black-color: #202020;
+$tertiary-color-light: #fdf8ee;
+$border-color-one: #d7d7d7;
+$border-color-two: #e7e7e7;
+$card-color: #fbfbff;
+$light-purple-color: #f7f3fd;
+$input-border-color: #e5e5e5;
+$light-text-color: #6e6e6e;
+$secondary-background-color: #f6f6f6;
+$basic-background-color: #f4f4f4;
+$tertiary-background-color: #fbfbff;
+$light-purple-background-color: #f6f1ff;
+/* border colors */
+$primary-border-color: #d7d7d7;
+$secondary-border-color: #e2e2e2;
+
+/* font-family */
+$primary-font: Lato;
+$secondary-font: Roboto;
+$tertiary-font: Roboto Slab;
+$font-tertiary: #828282;
+
+/* font colors */
+$black-one: #333333;
+$black-two: #000000;
+
+/* font Weight */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+/* font sizes */
+$font-size-xs: 10px;
+$font-size-sm: 12px;
+$line-height-sm: 14px;
+$font-size-md: 14px;
+$line-height-md: 17px;
+$font-size-lg: 16px;
+$font-size-xl: 18px;
+$font-size-xxl: 20px;
+$font-size-xxxl: 22px;
+$font-size-xxxxl: 24px;
+$font-size-xxxxxl: 26px;
+
+/* heading sizes */
+$font-big: 32px;
+
+/* Line Heights */
+$line-height-lg: 16px;
+$line-height-xl: 18px;
+$line-height-xxl: 32px;
+
+/* Status Colors */
+$draft-color: #633ea5;
+$draft-background-color: #f1ecf8;
+
+$review-color: #ed7021;
+$review-background-color: #fdf0e7;
+
+$hold-color: #666666;
+$hold-background-color: #f2f2f2;
+
+$more-info-color: #d41f00;
+$more-info-background-color: #ffe9e5;
+
+$live-color: #0f8f10;
+$live-background-color: #e8fde8;
+
+$in-progress-color: #ffb100;
+$in-progress-background-color: #fdf7e9;
+
+/* Block Colors */
+$primary-block-color: #fff6e1;
+$funds-block-color: #ede4fc;
+$secondary-block-color: #ffffff;
+$idea-block-color: #d2e6f9;
+
+// screen BreakPoints
+
+$small-mobile-breakpoint: 468px;
+$mobile-breakpoint: 768px;
+$tablet-breakpoint: 1024px;

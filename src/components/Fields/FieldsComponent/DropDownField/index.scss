@@ -1,0 +1,104 @@
+@import "../../../../variables.scss";
+
+$border-radius: 4px;
+$input-padding: 10px 16px;
+
+.dropdown-container {
+  :global(.anticon) {
+    color: $light-primary-color;
+  }
+
+  :global(.ant-form-item-label) {
+    padding: 0 0 6px !important;
+  }
+
+  :global(.ant-select:not(.ant-select-customize-input) .ant-select-selector) {
+    padding-block: 7px;
+    border-radius: $border-radius;
+  }
+
+  :global(.ant-select:not(.ant-select-disabled):hover .ant-select-selector) {
+    border-color: $light-primary-color;
+  }
+
+  :global(
+      .ant-select-focused:not(.ant-select-disabled).ant-select:not(
+          .ant-select-customize-input
+        )
+        .ant-select-selector
+    ) {
+    border-color: $light-primary-color;
+    box-shadow: 0 0 0 0.5px rgb(129, 96, 179/ 0.25);
+  }
+}
+
+.dropdown-popup {
+  :global(.ant-select-item) {
+    padding: 0;
+  }
+
+  :global(.rc-virtual-list-holder-inner) {
+    height: 100px;
+    overflow-y: scroll;
+  }
+
+  :global(.ant-select-item-option-state) {
+    display: none;
+  }
+
+  .option-container {
+    height: 100%;
+    padding: 5px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+
+    .option-input {
+      width: 100%;
+      text-transform: capitalize;
+
+      &:focus {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $light-primary-color;
+      }
+    }
+  }
+}
+
+.dropdown-input {
+  padding: $input-padding;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  outline: none;
+  color: $primary-black-color;
+  width: 100%;
+  text-transform: capitalize;
+
+  &:hover {
+    border: 1px solid $light-primary-color;
+  }
+
+  &:focus {
+    border: 1px solid $light-primary-color;
+    box-shadow: 0 0 0 0.5px $light-primary-color;
+  }
+}
+
+.dropdown-footer {
+  padding: 5px 12px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    color: $primary-color-purple;
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

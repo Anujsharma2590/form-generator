@@ -1,0 +1,9 @@
+export { default as AddBtnIcon } from './AddBtnIcon';
+export { default as CheckboxIcon } from './CheckboxIcon';
+export { default as LongTextIcon } from './LongTextIcon';
+export { default as NumericFieldIcon } from './NumericFieldIcon';
+export { default as RadioOnIcon } from './RadioOnIcon';
+export { default as ShortTextIcon } from './ShortTextIcon';
+export { default as DeleteSectionIcon } from './DeleteSectionIcon';
+export { default as RemoveIcon } from './RemoveIcon';
+export { default as DropdownIcon } from './DropdownIcon';

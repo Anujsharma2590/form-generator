@@ -1,0 +1,84 @@
+@import "../../../../variables.scss";
+
+.group-container {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+
+  padding-block: 10px;
+
+  .option-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 24px;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      transform: scale(1.3);
+      accent-color: $primary-color-purple;
+    }
+
+    .focus-input {
+      cursor: pointer;
+    }
+
+    .remove-opt-btn {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    &:hover {
+      .remove-opt-btn {
+        display: block;
+      }
+    }
+  }
+
+  .group-label {
+    font: normal 500 14px/16px Roboto;
+    color: $primary-black-color;
+    text-transform: capitalize;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $light-primary-color;
+    }
+  }
+
+  .focus-grp-label {
+    cursor: pointer;
+  }
+
+  .add-opt-btn {
+    display: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    span {
+      color: $light-primary-color;
+    }
+
+    .plus-icon-btn {
+      fill: $light-primary-color;
+    }
+  }
+
+  &:hover {
+    .add-opt-btn {
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+  }
+}
