@@ -60,6 +60,7 @@ const CustomSection = () => {
               <Switch onChange={handleSwitch} checked={mode === 'edit'} />
             </Tooltip>
           </div>
+            <span>please toggle this switch to change the mode </span>
         </span>
       </div>
       <>

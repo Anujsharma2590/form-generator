@@ -1,22 +1,21 @@
-import React, { FC, FocusEvent, RefObject, useState } from 'react';
-import ContentEditable, { ContentEditableEvent } from 'react-contenteditable';
-import sanitizeHtml, { IOptions } from 'sanitize-html';
+import  { FC, FocusEvent, RefObject, useState } from 'react'
+import ContentEditable, { ContentEditableEvent } from 'react-contenteditable'
+import sanitizeHtml, { IOptions } from 'sanitize-html'
 
-import './index.scss'
 
 type EditableProps = {
-  value: string;
-  placeholder: string;
-  tagName?: string;
-  className?: string;
-  inputRef?: RefObject<HTMLInputElement>;
-  onBlur: (value: string) => void;
-};
+  value: string
+  placeholder: string
+  tagName?: string
+  className?: string
+  inputRef?: RefObject<HTMLInputElement>
+  onBlur: (value: string) => void
+}
 
 const sanitizeConf: IOptions = {
   allowedTags: [],
-  allowedAttributes: {}
-};
+  allowedAttributes: {},
+}
 
 const Editable: FC<EditableProps> = ({
   value,
@@ -24,40 +23,42 @@ const Editable: FC<EditableProps> = ({
   tagName,
   className,
   inputRef,
-  onBlur
+  onBlur,
 }) => {
-  const [text, setText] = useState<string>(value); // this value can be used in edit mode to pre-populate
+  const [text, setText] = useState<string>(value) // this value can be used in edit mode to pre-populate
 
   function sanitizeText(text: string) {
-    const cleanText = sanitizeHtml(text, sanitizeConf);
+    const cleanText = sanitizeHtml(text, sanitizeConf)
 
-    return cleanText;
+    return cleanText
   }
 
   function handleChange(e: ContentEditableEvent) {
-    setText(e.target.value);
+    setText(e.target.value)
   }
 
   function handleOnBlur(e: FocusEvent<HTMLDivElement>) {
-    const cleanText = sanitizeText(e.target.innerText);
-    setText(cleanText);
-    onBlur(cleanText);
+    const cleanText = sanitizeText(e.target.innerText)
+    setText(cleanText)
+    onBlur(cleanText)
   }
+
+  console.log(placeholder)
 
   return (
     <>
-    <ContentEditable
-      style={{ width : '100%' }}
-      className={`${className}`}
-      innerRef={inputRef}
-      spellCheck="false"
-      html={text}
-      tagName={tagName}
-      onChange={handleChange}
-      onBlur={handleOnBlur}
-    />
+      <ContentEditable
+        style={{ width: '100%' }}
+        className={`${className}`}
+        innerRef={inputRef}
+        spellCheck="false"
+        html={text}
+        tagName={tagName}
+        onChange={handleChange}
+        onBlur={handleOnBlur}
+      />
     </>
-  );
-};
+  )
+}
 
-export default Editable;
+export default Editable
