@@ -4,11 +4,12 @@ import React, { FC } from 'react'
 
 import { TField } from '../types'
 
-import FieldRenderer from '../Fields/FieldsComponent/FieldRenderer'
+
 import './index.scss'
 import { RemoveIcon } from '../../add-new-section-icons'
 import { useSectionStore } from '../../store/sectionStore'
 import Label from './Label'
+import FieldRenderer from './FieldsComponent/FieldRenderer'
 
 type FieldProps = {
   field: TField

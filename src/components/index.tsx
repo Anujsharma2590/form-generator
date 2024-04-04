@@ -1,6 +1,5 @@
 import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
 import SectionFooter from './Footer'
-import FieldsContainer from './Fields/FieldsContainer'
 import { FieldTypeEnum, SectionModeEnum, TField, TOption } from './types'
 import { Flex, Switch, Tooltip } from 'antd'
 import { useSectionStore } from '../store/sectionStore'
@@ -27,7 +26,6 @@ const CustomSection = () => {
   function handleSwitch(checked: boolean) {
     setMode(checked ? 'edit' : 'entry')
   }
-
 
   const isEditMode = mode === SectionModeEnum.Edit
 
@@ -65,9 +63,7 @@ const CustomSection = () => {
         </span>
       </div>
       <>
-
-        {/* <FieldsContainer isEditMode={isEditMode} /> */}
-        <DynamicFields isEditMode={isEditMode}/>
+        <DynamicFields isEditMode={isEditMode} />
 
         <SectionFooter isEditMode={isEditMode} addField={handleAddField} />
       </>
