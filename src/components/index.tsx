@@ -44,7 +44,7 @@ const CustomSection = () => {
   }, [])
 
   return (
-    <div>
+    <div style={{ marginInline: '2vw'}}>
       <div>
         <span style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
           <h1>Custom component</h1>
