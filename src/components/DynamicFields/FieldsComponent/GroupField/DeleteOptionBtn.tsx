@@ -1,5 +1,4 @@
 import React, { FC, MouseEvent } from 'react'
-
 import CrossIcon from '../../../Icons/CrossIcon'
 import './index.scss'
 type DeleteOptionBtnProps = {

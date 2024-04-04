@@ -1,10 +1,5 @@
 import React, { FC } from 'react'
-
-
-
 import { TField } from '../types'
-
-
 import './index.scss'
 import { RemoveIcon } from '../../add-new-section-icons'
 import { useSectionStore } from '../../store/sectionStore'
@@ -19,16 +14,15 @@ type FieldProps = {
 
 const Field: FC<FieldProps> = ({ field, isEditMode, fieldIndex }) => {
   const { label, key: fieldKey } = field
-  const { removeField , updateField} = useSectionStore();
+  const { removeField, updateField } = useSectionStore()
 
   function setLabel(label: string) {
-    console.log(fieldKey, label )
-    updateField( fieldKey, {label} );
+    updateField(fieldKey, { label })
   }
 
   function handleRemoveField(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
-    removeField(fieldKey);
+    removeField(fieldKey)
   }
 
   return (

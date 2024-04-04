@@ -18,7 +18,6 @@ const TextareaField: FC<TextareaFieldProps> = ({
   const [fieldValue, setFieldValue] = useState<string>(value);
 
   function onBlur(e: React.FocusEvent<HTMLTextAreaElement>) {
-    console.log(fieldKey, { value: e.target.value });
     updateField(fieldKey, { value: e.target.value });
   }
 

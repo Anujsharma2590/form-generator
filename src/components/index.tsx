@@ -1,7 +1,7 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from 'react'
+import React, {  useCallback } from 'react'
 import SectionFooter from './Footer'
 import { FieldTypeEnum, SectionModeEnum, TField, TOption } from './types'
-import { Flex, Switch, Tooltip } from 'antd'
+import {  Switch, Tooltip } from 'antd'
 import { useSectionStore } from '../store/sectionStore'
 import DynamicFields from './DynamicFields'
 

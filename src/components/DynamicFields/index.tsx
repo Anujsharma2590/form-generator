@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { Col, Row } from "antd";
+import Field from "./Field";
 
 import { useSectionStore } from "../../store/sectionStore";
 import "./index.scss";
-import Field from "./Field";
 
 
 type FieldsContainerProps = {
@@ -13,9 +13,7 @@ type FieldsContainerProps = {
 const DynamicFields: FC<FieldsContainerProps> = ({ isEditMode }) => {
   
   const { fields } = useSectionStore();
-  console.log({
-    fields
-  })
+
 
   return (
     <div>
